@@ -1,0 +1,10 @@
+*.jpg
+*.jpeg
+*.png
+*.log
+*.zip
+
+/IMG
+/.idea
+/.gradle
+/build
