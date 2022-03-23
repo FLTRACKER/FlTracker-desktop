@@ -8,13 +8,14 @@ import retrofit2.http.POST
 
 interface SessionApi {
 
-    companion object {
-        const val API = "/api/sessions"
-    }
+	companion object {
 
-    @POST(API)
-    fun createNewSession(@Body sessionDto: SessionDto): Call<Long>
+		const val API = "/api/sessions"
+	}
 
-    @GET(API)
-    fun findAll(): Call<List<SessionDto>>
+	@POST(API)
+	fun createNewSession(@Body sessionDto: SessionDto): Call<Long>
+
+	@GET(API)
+	fun findAll(): Call<List<SessionDto>>
 }

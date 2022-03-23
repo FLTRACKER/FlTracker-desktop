@@ -10,13 +10,14 @@ import retrofit2.http.Path
 
 interface ActivityApi {
 
-    companion object {
-        const val API = "/api/activities"
-    }
+	companion object {
 
-    @POST(API)
-    fun addNewActivityInSession(@Body request: AddNewActivityRequest): Call<ActivityDto>
+		const val API = "/api/activities"
+	}
 
-    @POST("$API/{id}/addActiveWindow")
-    fun saveActiveWindowInfo(@Path("id") id: Long, @Body activeWindow: ActiveWindowDto): Call<ActiveWindowDto>
+	@POST(API)
+	fun addNewActivityInSession(@Body request: AddNewActivityRequest): Call<ActivityDto>
+
+	@POST("$API/{id}/addActiveWindow")
+	fun saveActiveWindowInfo(@Path("id") id: Long, @Body activeWindow: ActiveWindowDto): Call<ActiveWindowDto>
 }

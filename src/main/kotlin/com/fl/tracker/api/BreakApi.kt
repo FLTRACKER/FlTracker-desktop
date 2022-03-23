@@ -8,10 +8,11 @@ import retrofit2.http.POST
 
 interface BreakApi {
 
-    companion object {
-        const val API = "/api/breaks"
-    }
+	companion object {
 
-    @POST(API)
-    fun addNewBreakInSession(@Body request: AddNewBreakRequest): Call<BreakDto>
+		const val API = "/api/breaks"
+	}
+
+	@POST(API)
+	fun addNewBreakInSession(@Body request: AddNewBreakRequest): Call<BreakDto>
 }
