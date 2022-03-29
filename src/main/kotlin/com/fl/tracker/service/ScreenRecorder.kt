@@ -52,7 +52,7 @@ class ScreenRecorder {
 	private fun createSession() {
 		if (session == null) {
 			session = SessionDto(
-				user = UserDto(1, "хуй"),
+				user = UserDto("1", "хуй"),
 				startTime = LocalDateTime.now().format((DateTimeFormatter.ofPattern(("yyyy-MM-dd HH:mm:ss"))))
 			)
 			CoroutineScope(Dispatchers.IO).launch {
